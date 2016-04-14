@@ -1,0 +1,125 @@
+@font-face {
+	font-family: 'icomoon-standard-2015';
+	src:url('fonts/icomoon-standard-2015.eot?m0qicu');
+	src:url('fonts/icomoon-standard-2015.eot?#iefixm0qicu') format('embedded-opentype'),
+		url('fonts/icomoon-standard-2015.woff2?m0qicu') format('woff2'),
+		url('fonts/icomoon-standard-2015.ttf?m0qicu') format('truetype'),
+		url('fonts/icomoon-standard-2015.woff?m0qicu') format('woff'),
+		url('fonts/icomoon-standard-2015.svg?m0qicu#icomoon-standard-2015') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon-standard-2015';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-instagram:before {
+	content: "\69";
+}
+.icon-facebook2:before {
+	content: "\66";
+}
+.icon-feed:before {
+	content: "\72";
+}
+.icon-google-plus:before {
+	content: "\67";
+}
+.icon-linkedin:before {
+	content: "\e603";
+}
+.icon-xing:before {
+	content: "\58";
+}
+.icon-youtube:before {
+	content: "\79";
+}
+.icon-pinterest:before {
+	content: "\50";
+}
+.icon-twitter:before {
+	content: "\54";
+}
+.icon-arrows-alt:before {
+	content: "\39";
+}
+.icon-circle:before {
+	content: "\4f";
+}
+.icon-behance-square:before {
+	content: "\e608";
+}
+.icon-shopping-cart:before {
+	content: "\63";
+}
+.icon-email:before {
+	content: "\6d";
+}
+.icon-location-on:before {
+	content: "\6c";
+}
+.icon-message:before {
+	content: "\74";
+}
+.icon-keyboard-arrow-down:before {
+	content: "\36";
+}
+.icon-keyboard-arrow-left:before {
+	content: "\35";
+}
+.icon-keyboard-arrow-right:before {
+	content: "\38";
+}
+.icon-keyboard-arrow-up:before {
+	content: "\37";
+}
+.icon-dehaze:before {
+	content: "\3d";
+}
+.icon-arrow-back:before {
+	content: "\25";
+}
+.icon-arrow-forward:before {
+	content: "\28";
+}
+.icon-check:before {
+	content: "\2b";
+}
+.icon-close:before {
+	content: "\2d";
+}
+.icon-dnd-forwardslash:before {
+	content: "\78";
+}
+.icon-phone-in-talk:before {
+	content: "\70";
+}
+.icon-person:before {
+	content: "\6b";
+}
+.icon-publ:before {
+	content: "\77";
+}
+.icon-school:before {
+	content: "\a7";
+}
+.icon-share:before {
+	content: "\73";
+}
+.icon-check-box-outline-blank:before {
+	content: "\6f";
+}
+.icon-search:before {
+	content: "\3f";
+}

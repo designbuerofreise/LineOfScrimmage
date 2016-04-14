@@ -1,0 +1,61 @@
+@import "config.scss";
+
+form p {
+	margin: 20px 0 0 0;
+}
+
+label {
+	font-family: $ff_form;
+	display: inline-block;
+	padding: 0 0 5px 0;
+	font-size: 0.8em;
+}
+
+textarea,
+input[type="email"],
+input[type="search"],
+input[type="text"] {
+	padding: 5px 15px 7px;
+	border: solid 1px rgba(0,0,0,0.2);
+	border-radius: 5px;
+	background: none;
+	background: rgba(255,255,255,0.3);
+	margin: 0;
+	font-family: $ff_form;
+	font-size: $fs_copy*0.9;
+	width: $ww_article - 32px;
+	max-width: 90%;
+}
+
+a.button,
+.button {
+  display: inline-block;
+  padding: 12px 20px 10px;
+  background: $c_button;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: $fs_small;
+  font-weight: 700;
+  &:hover {
+	color:white;
+    transition: background 1s;
+    transform: scale(1.02);
+    background: darken($c_button,20%);
+    &:active {
+      transition: none;
+	  background: darken($c_button,20%);
+      transform: scale(1);
+    }
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"],
+input[type="submit"],
+input[type="button"],
+select {
+	cursor: pointer;
+}
+

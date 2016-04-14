@@ -1,0 +1,154 @@
+@import "config.scss";
+
+.jPanelMenu-panel {
+	@media screen and (min-width: 850px) {
+		display: none;
+	}
+}
+
+@keyframes kenburns {
+	
+	0% {
+		transform: scale(1);
+	}
+	
+	100% {
+		transform: scale(1.1);
+	}
+	
+}
+
+header {
+
+	position: relative;
+	top: 0;
+	z-index: 1905;
+	width: auto !important;
+	
+	margin: 0;
+	
+	.wrap {
+		max-width: none;
+		@media (min-width: 960px) {
+			width: 960px;
+		}
+		@media (min-width: 1024px) {
+			width: 1000px;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		color: $c_copy;
+		&.logo {
+			display: block;
+			width: 161px;
+			height: 99px;
+			background: url("../images/Logo.png") no-repeat;
+			background-size: 100% 100%;
+			text-indent: -5000px;
+		}
+	}
+	
+	#nav {
+
+		nav {
+
+			display: none;
+			@media (min-width: 414px) and (min-height: 400px) {
+				display: block;
+			}
+	
+			@extend .navhorizontal;
+
+		}
+
+	}
+
+	nav { /*Horizontal*/ 
+		&#secondary {
+			font-size: 0.9em;
+			ul {
+				margin: 10px auto 0;
+			}
+		}
+	}
+
+	h1 {
+	}
+
+	#rwd_menu_link {
+		display: none;
+		@media (max-width: 643px) {
+			display: block;
+			position: absolute;
+			left: 0px;
+			top: 10px;
+			width: 60px;
+			height: 52px;
+			background: url("../images/Burger.png") no-repeat right 15px;
+			cursor: pointer;
+		}
+	}
+
+	#mobile_menu {
+		display: none;
+	}
+
+}
+
+#jPanelMenu-menu {
+	background: $c_copy;
+
+	a {
+		padding: 15px 20px;
+		display: block;
+		border-bottom: solid 1px rgba(255,255,255,0.5);
+		text-decoration: none;
+		color: white;
+		font-size: 1.1em;
+	}
+
+}
+
+/************************************************************************************************/
+//
+// ! Fixed
+//
+
+@keyframes fixed {
+
+	0% {
+		top: -200px;
+	}
+	
+	100% {
+		top: -60px;
+	}
+	
+}
+
+body.fixed {
+	
+	@media (min-width: 960px) {
+
+		header {
+			position: fixed;
+			width: 100% !important;
+			max-width: 1280px;
+			transition: all 1s;
+			top: -60px;
+			animation: fixed 1s;
+			h1 {
+				a {
+				}
+			}
+		}
+		
+		section#content {
+			padding-top: 167px;
+		}
+		
+	}
+
+}

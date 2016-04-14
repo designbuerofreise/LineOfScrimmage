@@ -1,0 +1,27 @@
+@import "config.scss";
+
+body {
+
+	font-family: $ff_copy;
+	letter-spacing: -0.2px;
+	-webkit-font-smoothing: antialiased;
+
+}
+
+.wrap {
+
+	overflow: hidden;
+	max-width: $ww_full;
+	padding: 0 10px;
+	margin: 0 auto;
+	position: relative;
+
+}
+
+#wrapall {
+	
+	margin: 0 auto;
+	max-width: 1280px;
+	background: white;
+	
+}

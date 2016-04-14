@@ -1,0 +1,16 @@
+@import "config.scss";
+
+footer {
+
+	nav { /*Horizontal*/ 
+
+		display: none;
+		
+		@extend .navhorizontal;
+
+		@media (min-width: 960px) {
+			display: block;
+		}
+	}
+
+}

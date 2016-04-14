@@ -1,0 +1,143 @@
+@import "config.scss";
+
+/************************************************************************************************/
+/*
+/* Formate
+*/
+
+article {	
+	&.page,
+	&.type-date,
+	&.format-standard {
+	}
+	
+	&.format-image {
+	}
+	
+	&.format-quote {
+	}
+
+	&.format-status {
+	}
+	
+	&.format-gallery {
+		h2.title {
+			padding: 20px 20px 0 20px;
+		}
+		.gallery {
+			dl.gallery-item {
+				float: left;
+				text-align: center;
+				width: 33.33333%;
+				padding: 0;
+				margin: 0 !important;
+				img {
+					border: none !important;
+					width: 100%;
+					height: auto;
+					float: left;
+				}
+				background: none;
+				.wp-caption-text {
+					font-size: 0.8em;
+					margin: 0;
+				}
+				dt {
+					margin: 0;
+				}
+				dd {
+					display: none;
+				}
+			}
+		}
+	}
+	
+	&.format-video {
+		iframe {
+			max-width: 100%;
+		}
+	}
+	
+	#discussion {
+		
+		padding-bottom: 20px;
+		
+		p {
+			margin-bottom: 20px;
+		}
+
+		#commentform {
+			label {
+				display: block;
+			}
+		}
+		
+		ul#comments {
+			li {
+				&:before {
+					content: "";
+					float: none;
+					width: auto;
+				}
+				.avatarimg {
+					float: left;
+					width: 80px;
+				}
+				p.author {
+					margin-bottom: 5px;
+				}
+				.comment-wrap {
+					overflow: hidden;
+					float: left;
+					width: 540px;
+				}
+				ul {
+					clear: left;
+					margin-top: 20px;
+					margin-left: 80px;
+					li {
+						.avatarimg {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+.credits {
+	color: $c_copy;
+	p {
+		font-size: 1em;
+		margin: 0;
+		float: left;
+		margin: 0 20px 0 0;
+	}
+	a {
+		text-decoration: none;
+	}
+	ul {
+		font-size: 1em;
+		float: left;
+		margin: 0 20px 0 0;
+		li {
+			float: left;
+			background: none;
+			padding: 0;
+			margin: 0;
+			&:after { 
+				content: ",\00a0"; 
+			}
+			&:first-child,
+			&:last-child {
+				content: ""; 
+				&:after { 
+					content: ""; 
+				}
+			}
+		}
+	}
+} 
+

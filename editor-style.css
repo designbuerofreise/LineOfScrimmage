@@ -1,0 +1,8 @@
+@import "css/editor.css";
+
+html .mceContentBody {
+	max-width: 960px;
+}
+
+* {
+}

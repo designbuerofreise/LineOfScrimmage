@@ -1,0 +1,28 @@
+table {
+	width: 100%;
+	border: 2px solid #dddddd;
+	background: white;
+	font-size: $fs_table;
+}
+
+td,th {
+	border-top: solid 1px #dddddd;
+	border-left: solid 1px #dddddd;
+}
+
+th {
+	border-top: none;
+	background: #000;
+	color: white;
+	font-family: $ff_head;
+}
+
+th:first-child,
+td:first-child {
+	border-left: none;
+}
+
+tbody tr:nth-child(odd) td {
+	background-color: #eeeeee;
+}
+

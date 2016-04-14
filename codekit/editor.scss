@@ -1,0 +1,17 @@
+@import "typography.scss";
+
+body#tinymce.wp-editor,
+body,
+html .mceContentBody {
+	font-family: $ff_copy;
+	letter-spacing: -0.2px;
+	-webkit-font-smoothing: antialiased;
+	max-width: 680px;
+	@extend .typography;
+	h1 {
+		margin-top: 0;
+	}
+}
+
+* {
+}
