@@ -1,0 +1,177 @@
+@import "config.scss";
+
+/*
+@font-face {
+	font-family: 'icomoon-standard-2015';
+	src:url('fonts/icomoon-standard-2015.eot?m0qicu');
+	src:url('fonts/icomoon-standard-2015.eot?#iefixm0qicu') format('embedded-opentype'),
+		url('fonts/icomoon-standard-2015.woff2?m0qicu') format('woff2'),
+		url('fonts/icomoon-standard-2015.ttf?m0qicu') format('truetype'),
+		url('fonts/icomoon-standard-2015.woff?m0qicu') format('woff'),
+		url('fonts/icomoon-standard-2015.svg?m0qicu#icomoon-standard-2015') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+*/
+
+span.i {
+	font-family: 'icomoon-standard-2015';
+	margin: 0 0 0.5em 0;
+}
+
+.typography {
+
+	b,strong {
+		font-weight: $ff_copy_bold;
+	}
+
+	i,em {
+		font-style: italic;
+	}
+
+	blockquote,
+	pre {
+		padding: 8px 10px;
+	}
+
+	blockquote {
+		background: $c_grau;
+		padding: 1.5rem;
+		font-size: 1.2rem;
+		color: $c_grau;
+		font-weight: bold;
+		margin: 2.5rem 0;
+		p:last-child {
+			margin: 0;
+		}
+	}
+
+	pre {
+		font-family: $ff_fixed;
+		line-height: 1.5;
+		background: $c_grau;
+		color: white;
+		padding: 1.5rem;
+	}
+
+	color: $c_copy;
+
+	dd,
+	dt,
+	ul,
+	ol,
+	p {
+		margin: 0 0 1em 0;
+		line-height: 1.5;
+	}
+
+	.abstract {
+		@media (min-width: 560px) {
+			font-size: pxtorem(20);
+		}
+		font-weight: bold;
+		color: $c_grau;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	ul {
+		li {
+			margin-top: 10px;
+			&:nth-child {
+				margin: 0;
+			}
+		}
+		ul {
+			margin-left: 1em;
+		}
+	}
+
+	ol li {
+		list-style-type: decimal;
+		margin-left: 30px;
+	}
+
+	ul,
+	ol {
+		margin: 1em 0;
+		line-height: 1.4;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		margin: 2em 0 1em;
+		line-height: 1.4;
+		font-family: $ff_head;
+		font-weight: $ff_head_bold;
+		color: $c_head;
+		a {
+			text-decoration: none;
+			color: $c_copy;
+			&:hover {
+				color: black;
+			}
+		}
+	}
+
+	h1 {
+		font-size: pxtorem(32);
+		@media (min-width: 560px) {
+			font-size: pxtorem(48);
+		}
+	}
+	h2 {
+		font-size: pxtorem(24);
+		@media (min-width: 560px) {
+			font-size: pxtorem(32);
+		}
+		color: $c_head;
+	}
+	h3 {
+		font-size: pxtorem(22);
+		@media (min-width: 560px) {
+			font-size: pxtorem(24);
+		}
+	}
+	h4,
+	h5 {
+		font-size: pxtorem(18);
+		@media (min-width: 560px) {
+			font-size: pxtorem(22);
+		}
+	}
+
+	.coltop + h1,
+	.coltop + h2,
+	.coltop + h3,
+	.coltop + h4,
+	.coltop + h5,
+	a[name="copytop"] + h1,
+	a[name="copytop"] + h2,
+	a[name="copytop"] + h3,
+	a[name="copytop"] + h4,
+	a[name="copytop"] + h5 {
+		margin-top: 0;
+	}
+
+	a {
+		color: $c_link;
+		&:hover {
+			color: $c_head;
+			&:active {
+				color: $c_link;
+			}
+		}
+	}
+
+	.wp-caption p {
+		font-size: 0.8em;
+		margin: 0.5em 0 1em 0;
+	}
+
+}

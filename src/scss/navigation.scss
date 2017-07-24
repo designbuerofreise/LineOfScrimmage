@@ -1,0 +1,37 @@
+@import "config.scss";
+
+.navhorizontal {
+
+	& > ul {
+
+		display: inline-block;
+		
+		& > li {
+			
+			display: inline-block;
+			position: relative;
+			
+			ul {
+				
+				display: none;
+				position: absolute;
+				left: 0;
+				top: 0;
+				
+			}
+			
+			&:hover {
+				
+				ul {
+					
+					display: block;
+					
+				}
+				
+			}
+			
+		}
+
+	}
+
+}

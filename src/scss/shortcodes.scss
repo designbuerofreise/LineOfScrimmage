@@ -1,0 +1,53 @@
+@import "config.scss";
+
+.question,
+.tipp,
+.infobox {
+	box-sizing: border-box;
+	padding: 0.8rem 1rem;
+	margin: 0 0 1em 0;
+	background: $c_grau_hell;
+	color: $c_copy;
+	ul:last-child,
+	ul:last-child li:last-child,
+	p:last-child {
+		margin-bottom: 0;
+	}
+	.boxtop + h1,
+	.boxtop + h2,
+	.boxtop + h3 {
+		margin-top: 0;
+	}
+	p:last-child {
+		margin-bottom: 0 !important;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+	&.bold {
+		background: $c_link;
+		color: white;
+		h1, h2, h3, h4 {
+			color: white;
+		}
+		a {
+			color: white;
+			&:hover {
+				color: white;
+			}
+		}
+	}
+}
+
+.question,
+.tipp {
+	background: $c_grau_hell;
+}
+
+.question {
+	cursor: pointer;
+}
+
+.answer {
+	display: none;
+}

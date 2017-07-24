@@ -1,5 +1,5 @@
 /*
-	
+
 	 npm install --save-dev grunt-autoprefixer
      npm install --save-dev grunt-autoprefixer
      npm install --save-dev grunt-contrib-imagemin
@@ -9,7 +9,7 @@
      npm install --save-dev grunt-contrib-uglify
      npm install --save-dev grunt-contrib-watch
      npm install --save-dev grunt-newer
-	
+
 */
 
 module.exports = function(grunt) {
@@ -21,9 +21,9 @@ module.exports = function(grunt) {
 		  		options: {
 	  				style: 'compressed'
 	  			},
-		  		files: {  
-        			'css/styles.css': 'codekit/styles.scss',
-        			'css/editor.css': 'codekit/editor.scss'
+		  		files: {
+        			'css/styles.css': 'src/scss/styles.scss',
+        			'css/editor.css': 'src/scss/editor.scss'
 				}
 			}
 		},
@@ -32,8 +32,8 @@ module.exports = function(grunt) {
 		  	do_it: {
 		  		options: {
 	  			},
-		  		files: {  
-        			src: 'codekit/styles.scss'
+		  		files: {
+        			src: 'src/scss/styles.scss'
 				}
 			}
 		},
@@ -45,12 +45,12 @@ module.exports = function(grunt) {
 					sourceMap: true
 				},
 				files: {
-					'js/library-min.js': ['codekit/library.js']
+					'js/library-min.js': ['src/js/*.js']
 				}
 			}
-			
+
 		},
-		
+
 		imagemin: {
 			do_it: {
 				files: [
@@ -63,11 +63,15 @@ module.exports = function(grunt) {
 				]
 			}
 		},
-		
+
 		watch: {
 			sass: {
-				files: ['codekit/*.*'],
-				tasks: ['sass','uglify']
+				files: ['src/scss/*.*'],
+				tasks: ['sass']
+			},
+			js: {
+				files: ['src/js/*.js'],
+				tasks: ['uglify']
 			},
 			scripts: {
 				files: ['images/*.*'],
@@ -87,7 +91,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-newer');
 
-	grunt.registerTask('default', ['sass','autoprefixer','uglify','imagemin']);
-	grunt.registerTask('watchtower', ['watch','sass','autoprefixer','uglify','imagemin']);
+	grunt.registerTask('default', ['sass','uglify','imagemin']);
+	grunt.registerTask('w', ['watch']);
 
 };

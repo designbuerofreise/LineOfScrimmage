@@ -1,0 +1,41 @@
+.f-left,
+.alignleft {
+	@media ( min-width: 550px) {
+		float: left;
+	}
+}
+
+.f-right,
+.alignright {
+	@media ( min-width: 550px) {
+		float: right;
+	}
+}
+
+.aligncenter,
+.alignright,
+.alignleft {
+	display: block;
+	margin:  0 auto;
+	@media ( min-width: 550px) {
+		display: inline;
+		margin: 0 10px 10px 0;
+	}
+}
+
+.alignright {
+	@media ( min-width: 550px) {
+		display: inline;
+		margin: 0 0 10px 10px;
+	}
+}
+
+.a-left,
+.text-left {
+	text-align: left;
+}
+
+.a-right,
+.text-right {
+	text-align: right;
+}

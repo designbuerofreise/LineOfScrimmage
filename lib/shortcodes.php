@@ -10,7 +10,7 @@ Author URI: http://www.markus-freise.de/
 
 /************************************************************************************************/
 /*
-/* 
+/*
 */
 
 /************************************************************************************************/
@@ -39,7 +39,7 @@ function _sc_tipp($atts,$content) {
 add_shortcode('tipp','_sc_tipp');
 
 function _sc_box($atts,$content) {
-	return '<div class="infobox '.implode(" ",(array)$atts).'"><span class="top"></span>'.apply_filters("the_content",do_shortcode($content)).'</div>';
+	return '<div class="infobox '.implode(" ",(array)$atts).'"><span class="coltop"></span>'.apply_filters("the_content",(''.$content)).'</div>';
 }
 add_shortcode('box','_sc_box');
 
@@ -70,7 +70,8 @@ function _sc_col($atts,$content) {
 		$atts = array("");
 	endif;
 	$first = "";
-	return $first.'<div class="col '.implode(" ",(array)$atts).'"><span class="coltop"></span>'.apply_filters("the_content",do_shortcode($content)).'</div>';
+    return $first.'<div class="col '.implode(" ",(array)$atts).'"><span class="coltop"></span>'.apply_filters("the_content",do_shortcode(''.$content)).'</div>';
+	//return $first.'<div class="col '.implode(" ",(array)$atts).'"><span class="coltop"></span>'.apply_filters("the_content",do_shortcode($content)).'</div>';
 }
 add_shortcode('col','_sc_col');
 add_shortcode('col2','_sc_col');
@@ -106,12 +107,12 @@ add_shortcode('small','_sc_small');
 
 function the_content_filter($content) {
 
-	// array of custom shortcodes requiring the fix 
+	// array of custom shortcodes requiring the fix
 	$block = join("|",array("col","box"));
 
 	// opening tag
 	$rep = preg_replace("/(<p>)?\[($block)(\s[^\]]+)?\](<\/p>|<br \/>)?/","[$2$3]",$content);
-		
+
 	// closing tag
 	$rep = preg_replace("/(<p>)?\[\/($block)](<\/p>|<br \/>)?/","[/$2]",$rep);
 
