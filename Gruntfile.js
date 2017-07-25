@@ -51,19 +51,6 @@ module.exports = function(grunt) {
 
 		},
 
-		imagemin: {
-			do_it: {
-				files: [
-				{
-					expand: true,
-					cwd: "images/",
-					src: ['**/*.{png,jpg,gif}'],
-					dest: "images/"
-				}
-				]
-			}
-		},
-
 		watch: {
 			sass: {
 				files: ['src/scss/*.*'],
@@ -74,8 +61,8 @@ module.exports = function(grunt) {
 				tasks: ['uglify']
 			},
 			scripts: {
-				files: ['images/*.*'],
-				tasks: ['imagemin']
+				files: ['*.php','*/*.php'],
+				tasks: []
 			},
 			options: {
 				livereload: true
@@ -88,10 +75,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-autoprefixer');
-	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-newer');
 
-	grunt.registerTask('default', ['sass','uglify','imagemin']);
+	grunt.registerTask('default', ['sass','uglify']);
 	grunt.registerTask('w', ['watch']);
 
 };
